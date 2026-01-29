@@ -4,15 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building application'
-                mvn clean compile
+                echo 'Building Java application'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests'
-                mvn test
+                bat 'mvn test'
             }
         }
     }
