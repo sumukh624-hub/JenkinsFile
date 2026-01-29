@@ -4,15 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building Java application'
-                bat 'mvn clean compile'
+                echo 'Compiling Java program'
+                bat 'javac *.java'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests'
-                bat 'mvn test'
+                echo 'Running Java program'
+                bat 'java Main'
             }
         }
     }
